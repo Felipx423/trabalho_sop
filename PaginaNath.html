@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabrina Carpenter</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/076/245/971/small/red-lips-kiss-illustration-isolated-on-transparent-background-free-png.png">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#a8c8f0;
+    font-family:Georgia, serif;
+    color:#1d2b5c;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    font-size:4rem;
+    margin-bottom:30px;
+}
+
+h2{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.historia p,
+.gosto p{
+    width:100%;
+    text-align:justify;
+    line-height:1.7;
+    font-size:1.1rem;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.cabecalho h1{
+    font-size: 5rem;
+    text-align: left;
+}
+
+.foto-principal{
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.tabela-musicas{
+    width:100%;
+}
+
+.tabela-musicas td{
+    text-align:center;
+    padding:10px;
+}
+
+img{
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.tabela-musicas img:hover{
+    transform:scale(1.05);
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+
+figcaption{
+    margin-top:8px;
+    font-weight:bold;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:3rem;
+    }
+
+    .foto-principal{
+        width:100%;
+        max-width:400px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="cabecalho">
+    <h1>Sabrina Carpenter</h1>
+
+    <img src="assets/sabrina-carpenter-nath.webp"
+    class="foto-principal"
+    alt="Foto da Sabrina Carpenter">
+</div>
+
+<div class="container">
+
+    <section class="historia card">
+        <h2>História dela</h2>
+
+        <p>
+            Sabrina Carpenter iniciou sua carreira artística ainda na infância, ganhando destaque inicial como atriz ao estrelar a série Garota Conhece o Mundo (2014-2017) no Disney Channel. Paralelamente à atuação, a artista nascida na Pensilvânia começou a lançar suas primeiras músicas e álbuns pop, como Eyes Wide Open (2015) e Evolution (2016), construindo uma base de fãs sólida enquanto amadurecia sua identidade visual e musical.
+            <br><br>
+            A transição definitiva para o estrelato global consolidou-se com o lançamento do álbum Emails I Can't Send (2022) e ganhou proporções gigantescas entre 2024 e 2026. Impulsionada por hits mundiais como "Espresso" e "Please Please Please", além do aclamado disco Short n' Sweet, Sabrina transformou-se em um dos maiores fenômenos da música pop atual, dominando as paradas e lotando arenas pelo mundo.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Músicas mais famosas</h2>
+
+        <table class="tabela-musicas">
+            <tr>
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/cF1Na4AIecM?si=tq6w_SaVd8nu-sPu" target="_blank">
+                            <img src="assets/please-please-please-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>Please Please Please</figcaption>
+                    </figure>
+                </td>
+
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/eVli-tstM5E?si=VRlJOLgrgoSqmoIP" target="_blank">
+                            <img src="assets/espresso-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>Espresso</figcaption>
+                    </figure>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/KEG7b851Ric?si=eaYIvndWMF-2-VRj" target="_blank">
+                            <img src="assets/taste-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>Taste</figcaption>
+                    </figure>
+                </td>
+
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/aSugSGCC12I?si=xoX0mtpcQHsIW871" target="_blank">
+                            <img src="assets/manchild-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>Manchild</figcaption>
+                    </figure>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="card">
+        <h2>Minhas músicas favoritas</h2>
+
+        <table class="tabela-musicas">
+            <tr>
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/bnhV-OBnGCE?si=_VvoUv6ohIFBwP6q" target="_blank">
+                            <img src="assets/wdygh-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>When Did You Get Hot?</figcaption>
+                    </figure>
+                </td>
+
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/KWoTyfPsqbE?si=r8fhqNtKdVcNQlyc" target="_blank">
+                            <img src="assets/house-tour-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>House Tour</figcaption>
+                    </figure>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/1YUBbF24H44?si=-aFTUmy7Al9GKxZD" target="_blank">
+                            <img src="assets/bilab-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>because i liked a boy</figcaption>
+                    </figure>
+                </td>
+
+                <td>
+                    <figure>
+                        <a href="https://youtu.be/alYCYZvB3yo?si=IjjJvFhHpHm9xbwt" target="_blank">
+                            <img src="assets/please-please-please-nath.jpg" width="180" alt="">
+                        </a>
+                        <figcaption>Good Graces</figcaption>
+                    </figure>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="gosto card">
+        <h2>Por que eu gosto dela</h2>
+
+        <p>
+            Eu gosto da Sabrina porque suas músicas me agradam bastante. Acho que sua voz é suave e muito gostosa de ouvir, além de suas letras serem criativas e marcantes. Também admiro a forma como ela aparenta tratar seus fãs com carinho e respeito, sempre demonstrando simpatia e gentileza. Por isso, ela é uma artista que eu gosto e admiro muito.
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    Nathália Melo Humpel • 1º D
+</footer>
+
+</body>
+</html>
