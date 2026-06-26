@@ -1,0 +1,259 @@
+/* =========================================================
+   style_joao.css
+   Tema: Frogstomp (Silverchair, 1995)
+   Paleta inspirada na capa do disco — fotografia macro
+   esverdeada de um charco/lagoa, granulada, com tipografia
+   crua de fanzine grunge dos anos 90.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  /* paleta extraída da capa de Frogstomp */
+  --bg-deep:    #141d10;  /* charco escuro / sombra do pântano */
+  --moss:       #3c4a22;  /* musgo — superfícies escuras */
+  --frog:       #8aa33f;  /* verde-rã — cor de assinatura */
+  --frog-dark:  #5c6e2e;  /* verde-rã escurecido, p/ texto sobre claro */
+  --lichen:     #d7df85;  /* verde-limão claro — destaque/hover */
+  --parchment:  #f2ecd6;  /* papel — painéis de conteúdo */
+  --mud:        #4a2f1c;  /* barro — bordas, sombras, divisores */
+  --mud-light:  #7a5234;
+
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-body: 'Work Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--mud);
+  background-color: var(--bg-deep);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 15% 10%, rgba(138,163,63,0.18), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 0%, rgba(74,47,28,0.35), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 50% 100%, rgba(60,74,34,0.30), transparent 70%);
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+/* leve textura de "ruído" sobre o fundo, lembrando a foto
+   granulada e borrada da capa do disco */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: repeating-linear-gradient(0deg, #fff 0 1px, transparent 1px 3px),
+                     repeating-linear-gradient(90deg, #fff 0 1px, transparent 1px 3px);
+  mix-blend-mode: overlay;
+}
+
+a { color: inherit; }
+
+img { display: block; max-width: 100%; }
+
+/* divisor — um anel se espalhando, como a onda de um "stomp" na água */
+hr {
+  border: none;
+  height: 34px;
+  margin: 0;
+  background-image:
+    linear-gradient(to right, transparent, var(--mud-light) 35%, var(--mud-light) 65%, transparent),
+    radial-gradient(circle, transparent 0 7px, var(--frog) 8px 9px, transparent 10px);
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: 76% 1px, 26px 26px;
+  opacity: 0.55;
+}
+
+/* =========================
+   Container geral — a "página de fanzine"
+   ========================= */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--parchment);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.55);
+  overflow: hidden;
+  position: relative;
+}
+
+/* =========================
+   Cabeçalho — banner estilo capa de disco
+   ========================= */
+.cabecalho {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, var(--moss) 0%, var(--bg-deep) 100%);
+  padding: 56px 40px 64px;
+  color: var(--parchment);
+  text-align: left;
+}
+
+/* ondas concêntricas — referência direta ao "stomp" que dá
+   nome ao álbum: o impacto que se espalha em ondas na água */
+.cabecalho::before,
+.cabecalho::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -90px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid rgba(215, 223, 133, 0.25);
+}
+.cabecalho::after {
+  right: -130px;
+  bottom: -160px;
+  width: 420px;
+  height: 420px;
+  border-color: rgba(215, 223, 133, 0.14);
+}
+
+.titulo-principal {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(2.1rem, 6vw, 3.2rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0 0 28px;
+  color: var(--lichen);
+  text-shadow: 3px 3px 0 var(--mud);
+  position: relative;
+  z-index: 1;
+}
+
+.informacoes {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.informacoes li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  background: rgba(20, 29, 16, 0.55);
+  border-left: 3px solid var(--frog);
+  padding: 8px 14px;
+  color: var(--parchment);
+}
+
+/* =========================
+   Conteúdo principal
+   ========================= */
+.conteudo {
+  padding: 8px 40px 48px;
+}
+
+.banda-favorita > p:first-of-type {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--frog-dark);
+  text-transform: uppercase;
+  margin: 0 0 28px;
+}
+
+.titulo-secao {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: 0.03em;
+  color: var(--mud);
+  margin: 40px 0 4px;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-secao::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 70%;
+  margin-top: 6px;
+  background: var(--frog);
+  border-radius: 2px;
+}
+
+/* foto da banda — like uma polaroide presa na página */
+.imagem-banda {
+  margin: 28px auto 32px;
+  max-width: 360px;
+  border: 8px solid var(--parchment);
+  outline: 2px solid var(--mud-light);
+  box-shadow: 0 12px 24px rgba(20, 29, 16, 0.35);
+  transform: rotate(-1.5deg);
+}
+
+.subtitulo {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+  color: var(--frog-dark);
+  border-left: 4px solid var(--frog);
+  padding-left: 12px;
+  margin: 36px 0 16px;
+}
+
+.texto {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0 0 8px;
+}
+
+.texto br + br { content: ""; }
+
+/* links para as páginas da Wikipedia dos integrantes */
+.link-integrante {
+  color: var(--frog-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--frog);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.link-integrante:hover,
+.link-integrante:focus-visible {
+  color: var(--mud);
+  background-color: var(--lichen);
+}
+
+a:focus-visible,
+.link-integrante:focus-visible {
+  outline: 2px solid var(--frog-dark);
+  outline-offset: 2px;
+}
+
+/* =========================
+   Responsivo
+   ========================= */
+@media (max-width: 560px) {
+  body { padding: 0; }
+  .container { box-shadow: none; }
+  .cabecalho { padding: 40px 22px 48px; }
+  .conteudo { padding: 8px 22px 40px; }
+  .informacoes { gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
