@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 ```md
+=======
+>>>>>>> c0a9be083b7f9735ea04339f2ad8df83844a307d
 # Cantores Favoritos
 
 ## Integrantes da Equipe
@@ -47,4 +50,3 @@ Também é possível clicar com o botão direito no arquivo `index.html` e selec
 - HTML5
 - CSS3
 
-```
