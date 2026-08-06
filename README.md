@@ -39,9 +39,9 @@ Cada página do site contém:
 1. Baixe ou clone este repositório.
 2. Extraia os arquivos (caso estejam compactados).
 3. Abra a pasta do projeto.
-4. Clique duas vezes no arquivo `index.html` ou abra-o em qualquer navegador.
+4. Clique duas vezes no arquivo `PaginaInicial.html` ou abra-o em qualquer navegador.
 
-Também é possível clicar com o botão direito no arquivo `index.html` e selecionar **Abrir com** para escolher o navegador de sua preferência.
+Também é possível clicar com o botão direito no arquivo `PaginaInicial.html` e selecionar **Abrir com** para escolher o navegador de sua preferência.
 
 ---
 
