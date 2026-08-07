@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ```md
-=======
->>>>>>> c0a9be083b7f9735ea04339f2ad8df83844a307d
 # Cantores Favoritos
 
 ## Integrantes da Equipe
@@ -50,3 +47,5 @@ Também é possível clicar com o botão direito no arquivo `PaginaInicial.html`
 - HTML5
 - CSS3
 
+## Link da página
+[Página Inicial](https://felipx423.github.io/trabalho_sop/)
